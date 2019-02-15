@@ -3,29 +3,48 @@
 
 <head>
     <style>
-        .flex-container {
-            display: flex;
-            flex-wrap: nowrap;
-            background-color: DodgerBlue;
+        .item1 {
+            grid-area: image1;
         }
 
-        .flex-container>div {
-            background-color: #f1f1f1;
-            width: 100px;
-            margin: 10px;
+        .item2 {
+            grid-area: image2;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'image1'
+                'image2';
+
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+            justify-items: center;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
-            line-height: 100px;
+            padding: 20px 0;
             font-size: 30px;
         }
+
+         img {
+            display: block;
+            max-width: 100%;
+            height: 50vh;
+        }
+    </style>
     </style>
 </head>
 
 <body>
-    <div class='flex-container'>
-        <div>
+    <div class='grid-container'>
+        <div class='image1'>
             <img src='castle.svg' alt='castle'>
         </div>
-        <div>
+        <div class='image2'>
             <img src='castle.svg' alt='castle'>
         </div>
     </div>
